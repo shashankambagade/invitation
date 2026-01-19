@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="mr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>नामकरण सोहळा - निमंत्रण</title>
+
+  <!-- Google Font (Anek Devanagari) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --ink:#1c1c1c;
+      --accent:#8a1a1a;
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      font-family: "Anek Devanagari", system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans Devanagari", sans-serif;
+      background:#eee;
+    }
+
+    /* A4 page */
+    .page{
+      width: 210mm;
+      height: 297mm;
+      margin: 0 auto;
+      position: relative;
+
+      /* Background image */
+      background-image: url("bg.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      /* Helps printing backgrounds */
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+
+      /* Content safe padding (keeps text inside border art) */
+      padding: 28mm 22mm 26mm;
+      overflow: hidden;
+    }
+
+    /* A soft readable layer (keeps text readable on textured background) */
+    .content{
+      text-align:center;
+      color: var(--ink);
+    }
+
+    .topline{
+      font-weight:700;
+      color: var(--accent);
+      font-size: 18px;
+      letter-spacing: .4px;
+      margin-top: 2mm;
+    }
+
+    .title{
+      margin: 27mm 0 30mm;
+      font-size: 44px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.1;
+    }
+
+    .para{
+      font-size: 24px;
+      line-height: 1.75;
+      margin: 0 auto 15mm;
+      max-width: 155mm;
+	  
+    }
+
+    .box{
+      margin: 14mm auto 0;
+      max-width: 165mm;
+      padding: 10mm 10mm;
+      border-radius: 16px;
+
+      /* semi transparent white to stand out, but still shows design */
+      background: rgba(255,255,255,.70);
+      border: 1px solid rgba(138,26,26,.25);
+      backdrop-filter: blur(1px);
+    }
+
+    .row{
+      display:flex;
+      justify-content:center;
+      gap: 10mm;
+      flex-wrap: wrap;
+      margin: 4mm 0;
+    }
+
+    .label{
+      display:block;
+      font-weight:700;
+      color: var(--accent);
+      font-size: 24px;
+      margin-bottom: 2mm;
+    }
+
+    .value{
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    .place{
+      margin-top: 6mm;
+    }
+
+    .footer{
+      position:absolute;
+      left: 22mm;
+      right: 22mm;
+      bottom: 58mm;
+      text-align:center;
+    }
+
+    /* Print settings */
+    @page { size: A4; margin: 0; }
+
+    @media print{
+      body{ background:#fff; }
+      .page{
+        margin: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="page" aria-label="Invitation">
+    <div class="content">
+      <div class="topline">|| श्री गणेशाय नमः ||</div>
+
+      <div class="title">नामकरण सोहळा</div>
+
+      <p class="para">
+       <span style="font-size:30px"> श्री स्वामी समर्थ कृपेने</span> <br> <b>श्री शशांक आणि सौ. शिवानी अंबागडे </b> यांच्या चिरंजीवाचे नामकरण सोहळा आयोजित करण्यात आला आहे. तरी आपण सर्वांनी उपस्थित राहून नव्या आयुष्याला शुभाशीर्वाद द्यावेत, ही नम्र विनंती.
+      </p>
+
+      <div class="box-">
+        <div class="row">
+          <div>
+            <span class="label">📅 दिनांक</span>
+            <div class="value">गुरुवार, २२ जानेवारी २०२६, <br>संध्याकाळी ५:०० वाजता</div>
+          </div>
+		  <div>
+		  <span class="label">📍 स्थळ</span>
+          <div class="value">
+            श्री स्वामी समर्थ झुणका भाकर केंद्र<br>
+            आर्वी नाका, मानस मंदिर रोड, वर्धा
+          </div>
+		  </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span class="label">🙏 निमंत्रक</span>
+        <div class="value">अभिषेक श्याम चांभारे</div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
